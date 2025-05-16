@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores da Terra - Autêntica Cozinha Italiana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header id="main-header">
+        <div id="header-container">
+            <a href="#" id="logo"><img src="logo.png" alt=""></a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#menu-section">Cardápio</a></li>
+                    <li><a href="#reservation-section">Reservas</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="hero-banner">
+        <div id="banner-content">
+            <h1>Autêntica Cozinha Italiana</h1>
+            <p>Descubra os verdadeiros sabores da Itália em um ambiente acolhedor e sofisticado.</p>
+            <a href="#reservation-section" class="btn">Reserve Agora</a>
+        </div>
+    </section>
+    
+    <section id="menu-section">
+        <h2>Nosso Cardápio</h2>
+        
+        <div class="menu-category">
+            <h3>Antipasti</h3>
+            <div class="menu-item">
+                <div class="menu-item-name">Bruschetta Classica</div>
+                <div class="menu-item-desc">Pão italiano grelhado com tomate fresco, manjericão e azeite de oliva extra virgem</div>
+                <div class="menu-item-price">R$ 28,90</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Carpaccio di Manzo</div>
+                <div class="menu-item-desc">Finas fatias de filé mignon cru, com rúcula, parmesão e molho de mostarda</div>
+                <div class="menu-item-price">R$ 42,50</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Fritto Misto</div>
+                <div class="menu-item-desc">Misto de frutos do mar e legumes empanados e fritos, servido com molho tártaro</div>
+                <div class="menu-item-price">R$ 56,90</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h3>Primi Piatti</h3>
+            <div class="menu-item">
+                <div class="menu-item-name">Spaghetti Carbonara</div>
+                <div class="menu-item-desc">Espaguete com molho cremoso de ovos, queijo pecorino, pancetta e pimenta preta</div>
+                <div class="menu-item-price">R$ 48,90</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Risotto ai Funghi</div>
+                <div class="menu-item-desc">Arroz arbóreo cremoso com cogumelos frescos e trufa negra</div>
+                <div class="menu-item-price">R$ 52,50</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Gnocchi al Pesto</div>
+                <div class="menu-item-desc">Nhoque caseiro com pesto de manjericão fresco, pinoli e parmesão</div>
+                <div class="menu-item-price">R$ 45,90</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h3>Secondi Piatti</h3>
+            <div class="menu-item">
+                <div class="menu-item-name">Ossobuco alla Milanese</div>
+                <div class="menu-item-desc">Vitela cozida lentamente com vinho branco, legumes e gremolata</div>
+                <div class="menu-item-price">R$ 89,90</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Saltimbocca alla Romana</div>
+                <div class="menu-item-desc">Filé de vitela com presunto parma e sálvia, coberto com vinho branco</div>
+                <div class="menu-item-price">R$ 78,50</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Branzino al Forno</div>
+                <div class="menu-item-desc">Robalo assado com ervas frescas, limão siciliano e batatas rústicas</div>
+                <div class="menu-item-price">R$ 95,90</div>
+            </div>
+        </div>
+        
+        <div class="menu-category">
+            <h3>Dolci</h3>
+            <div class="menu-item">
+                <div class="menu-item-name">Tiramisù</div>
+                <div class="menu-item-desc">Clássico italiano com biscoitos savoiardi embebidos em café e creme de mascarpone</div>
+                <div class="menu-item-price">R$ 32,90</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Panna Cotta</div>
+                <div class="menu-item-desc">Creme italiano com calda de frutas vermelhas e folhas de hortelã</div>
+                <div class="menu-item-price">R$ 28,50</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Cannoli Siciliani</div>
+                <div class="menu-item-desc">Tubos crocantes recheados com ricota doce, chocolate e frutas cristalizadas</div>
+                <div class="menu-item-price">R$ 36,90</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="reservation-section">
+        <div id="reservation-container">
+            <h2>Faça sua reserva</h2>
+            <form id="reservation-form" onsubmit="submitReservation(event)">
+                <!-- Dados Pessoais -->
+                <div class="form-group">
+                    <label for="full-name">Nome Completo*</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefone*</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" required>
+                    <span class="error-message">Por favor, insira um telefone válido (10 ou 11 dígitos)</span>
+                </div>
+                
+                <!-- Data e Horário -->
+                <div class="form-group">
+                    <label for="reservation-date">Data da Reserva*</label>
+                    <input type="date" id="reservation-date" name="reservation-date" min="" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reservation-time">Horário*</label>
+                    <select id="reservation-time" name="reservation-time" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                    </select>
+                </div>
+                
+                <!-- Tamanho do Grupo -->
+                <div class="form-group" id="full-width-group">
+                    <label for="party-size">Número de Pessoas: <span id="range-value">2</span></label>
+                    <input type="range" id="party-size" name="party-size" min="1" max="12" value="2" oninput="updateRangeValue(this.value)">
+                </div>
+                
+                <!-- Seleção de Mesa -->
+                <div class="form-group" id="full-width-group">
+                    <label>Preferência de Mesa</label>
+                    <div id="table-selection">
+                        <div class="table-option" onclick="selectTable(this)">Mesa 1 (2 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 2 (2 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 3 (4 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 4 (4 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 5 (6 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 6 (6 pessoas)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 7 (varanda)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 8 (varanda)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 9 (privativa)</div>
+                        <div class="table-option" onclick="selectTable(this)">Mesa 10 (privativa)</div>
+                    </div>
+                    <input type="hidden" id="selected-table" name="selected-table">
+                </div>
+                
+                <!-- Preferências Gastronômicas -->
+                <div class="form-group" id="full-width-group">
+                    <label for="dietary-restrictions">Restrições Alimentares ou Alergias</label>
+                    <textarea id="dietary-restrictions" name="dietary-restrictions" rows="3"></textarea>
+                </div>
+                
+                <!-- Ocasão Especial -->
+                <div class="form-group" id="full-width-group">
+                    <label>É uma ocasião especial?</label>
+                    <div id="special-occasion">
+                        <div class="occasion-option">
+                            <input type="radio" id="none" name="special-occasion" value="none" checked>
+                            <label for="none">Nenhuma</label>
+                        </div>
+                        <div class="occasion-option">
+                            <input type="radio" id="anniversary" name="special-occasion" value="anniversary">
+                            <label for="anniversary">Aniversário</label>
+                        </div>
+                        <div class="occasion-option">
+                            <input type="radio" id="date" name="special-occasion" value="date">
+                            <label for="date">Encontro</label>
+                        </div>
+                        <div class="occasion-option">
+                            <input type="radio" id="business" name="special-occasion" value="business">
+                            <label for="business">Negócios</label>
+                        </div>
+                        <div class="occasion-option">
+                            <input type="radio" id="family" name="special-occasion" value="family">
+                            <label for="family">Família</label>
+                        </div>
+                        <div class="occasion-option">
+                            <input type="radio" id="other" name="special-occasion" value="other">
+                            <label for="other">Outro</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comentários Adicionais -->
+                <div class="form-group" id="full-width-group">
+                    <label for="additional-notes">Comentários Adicionais</label>
+                    <textarea id="additional-notes" name="additional-notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn" id="submit-btn">Confirmar Reserva</button>
+                
+                <div id="confirmation-message">
+                    <h3>Reserva Confirmada!</h3>
+                    <p>Obrigado por escolher o Sabores da Terra. Enviamos os detalhes da sua reserva para o e-mail fornecido.</p>
+                    <p>Estamos ansiosos para recebê-lo!</p>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 4rem 5%;">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Sobre Nós</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <p style="margin-bottom: 1.5rem;">O Sabores da Terra nasceu da paixão pela autêntica culinária italiana, trazendo receitas tradicionais passadas de geração em geração.</p>
+                    <p style="margin-bottom: 1.5rem;">Nosso chef, Giovanni Rossi, traz mais de 20 anos de experiência nas melhores cozinhas da Itália, incluindo Toscana, Piemonte e Sicília.</p>
+                    <p>Todos os nossos ingredientes são selecionados cuidadosamente, com muitos importados diretamente da Itália para garantir a autenticidade dos sabores.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chef Giovanni Rossi" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" style="background-color: var(--primary); color: var(--light); padding: 4rem 5%;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem; color: var(--light);">Contato</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Horário de Funcionamento</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Terça a Quinta:</strong> 18:00 - 22:00</p>
+                    <p style="margin-bottom: 1rem;"><strong>Sexta e Sábado:</strong> 18:00 - 23:00</p>
+                    <p style="margin-bottom: 1rem;"><strong>Domingo:</strong> 12:00 - 17:00</p>
+                    <p><strong>Segunda-feira:</strong> Fechado</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Informações</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Endereço:</strong> Rua das Oliveiras, 123 - Jardim Itália, São Paulo</p>
+                    <p style="margin-bottom: 1rem;"><strong>Telefone:</strong> (11) 1234-5678</p>
+                    <p style="margin-bottom: 1rem;"><strong>E-mail:</strong> contato@saboresdaterra.com.br</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="main-footer">
+        <div id="footer-content">
+            <div id="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>Sabores da Terra © 2025 - Todos os direitos reservados - Arthur Galvão </p>
+        </div>
+    </footer>
